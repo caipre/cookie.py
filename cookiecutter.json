@@ -1,0 +1,12 @@
+{
+    "author_name": "",
+    "author_email": "",
+    "github_username": "",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "license":  ["MIT", "BSD", "ISC", "Apache-2.0", "GNUv2", "GNUv3"],
+    "project_name": "",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_url": "",
+    "project_description": "",
+    "project_keywords": ""
+  }
