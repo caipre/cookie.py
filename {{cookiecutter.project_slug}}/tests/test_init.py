@@ -20,7 +20,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-{% elif cookiecutter.license == 'BSD' %}
+{% elif cookiecutter.license == 'BSD' -%}
 # BSD License
 #
 # Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.author_name }}
@@ -122,7 +122,7 @@
 #
 #     You should have received a copy of the GNU General Public License
 #     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-{% endif %}
+{% endif -%}
 
 
 def test_it_works():

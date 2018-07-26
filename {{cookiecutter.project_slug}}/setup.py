@@ -23,20 +23,17 @@ def find_meta(key):
     return meta[key]
 
 
-def requirements(*paths):
-    with open(os.path.join(here, *paths)) as f:
+def requirements(path):
+    with open(os.path.join(here, path)) as f:
         reqs_txt = f.read()
     parsed = [re.split(r'[<~=>]=?', r, maxsplit=2)[0]
               for r in reqs_txt.splitlines() if not r.startswith('-f')]
     return [r for r in parsed if r != '']
 
 
-def read(*paths, sep='\n', enc='utf-8'):
-    buf = []
-    for path in paths:
-        with codecs.open(os.path.join(here, path), 'rb', enc) as f:
-            buf.append(f.read())
-    return sep.join(buf)
+def read(path, enc='utf-8'):
+    with codecs.open(os.path.join(here, path), 'rb', enc) as f:
+        return f.read()
 
 
 setup(
